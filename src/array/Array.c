@@ -149,3 +149,22 @@ void bubbleSort(int *array, int length)
         }
     }
 }
+
+void selectionSort(int *array, int length)
+{
+    int min;
+    for (int i = 0; i < length; i++)
+    {
+        //i determines the first element of unsorted list
+        //min locates the minimum number
+        min = i;
+        for (int j = i + 1; j < length; j++)
+        {
+            if (*(array + j) < *(array + min))
+            {
+                min = j;
+            }
+        }
+        swapItems(array, min, i);
+    }
+}

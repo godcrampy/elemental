@@ -41,4 +41,8 @@ int frequencyOfItem(int *array, int length, int number);
 // bubble sort array O(length^2)
 void bubbleSort(int *array, int length);
 
+// selection sort array O(length^2)
+void selectionSort(int *array, int length);
+
+
 #endif
