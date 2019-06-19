@@ -22,4 +22,10 @@ void swapItems(int *array, int left, int right);
 // shuffle items in array
 void shuffleArray(int *array, int length);
 
+// sum of array
+int sumOfArray(int *array, int length);
+
+// mean of array
+int meanOfArray(int *array, int length);
+
 #endif

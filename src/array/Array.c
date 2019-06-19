@@ -69,3 +69,18 @@ void shuffleArray(int *array, int length)
         swapItems(array, i, random);
     }
 }
+
+int sumOfArray(int *array, int length)
+{
+    int sum = 0;
+    for (int i = 0; i < length; i++)
+    {
+        sum += *(array + i);
+    }
+    return sum;
+}
+
+int meanOfArray(int *array, int length)
+{
+    return sumOfArray(array, length) / length;
+}
