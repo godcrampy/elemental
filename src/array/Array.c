@@ -168,3 +168,24 @@ void selectionSort(int *array, int length)
         swapItems(array, min, i);
     }
 }
+
+void insertionSort(int *array, int length)
+{
+    int min;
+    // i is the location of the first member of unsorted list
+    for (int i = 1; i < length; i++)
+    {
+        for (int j = i - 1; j >= 0; j--)
+        {
+            //j is the iterator that goes up the list
+            if (*(array + j) > *(array + j + 1))
+            {
+                swapItems(array, j, j + 1);
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+}

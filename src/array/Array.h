@@ -44,5 +44,8 @@ void bubbleSort(int *array, int length);
 // selection sort array O(length^2)
 void selectionSort(int *array, int length);
 
+// insertion sort
+void insertionSort(int * array, int length);
+
 
 #endif
