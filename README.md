@@ -1,9 +1,10 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/godcrampy/elemental/master/docs/commons/flame-named.png" style="width: 500px; height: auto;">
+  <img src="https://raw.githubusercontent.com/godcrampy/elemental/master/docs/commons/flame-named.png" style="width: 400px; height: auto;">
 </div>
-# Elemental Library
+-----------------
 
-A Simple library written in C language with implementation of common Data Structures and Algorithms.
+
+**Elemental** is a simple library written in C language with implementation of common Data Structures and Algorithms.
 
 ## Getting Started
 
