@@ -1,6 +1,8 @@
+![Elemental Library](https://raw.githubusercontent.com/godcrampy/elemental/master/docs/commons/flame-named.png "Elemental")
+
 # Elemental Library
 
-Basic c library with imlementation of common Data Structures and Algorithms.
+A Simple library written in C language with implementation of common Data Structures and Algorithms.
 
 ## Getting Started
 
