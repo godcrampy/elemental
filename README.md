@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/godcrampy/elemental/master/docs/commons/flame-named.png" style="width: 400px; height: auto;">
+  <img src="https://raw.githubusercontent.com/godcrampy/elemental/master/docs/commons/flame-named.png" style="width: 200px; height: auto;">
 </div>
 
 -----------------
