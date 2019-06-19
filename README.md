@@ -1,8 +1,8 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/godcrampy/elemental/master/docs/commons/flame-named.png" style="width: 400px; height: auto;">
 </div>
------------------
 
+-----------------
 
 **Elemental** is a simple library written in C language with implementation of common Data Structures and Algorithms.
 
