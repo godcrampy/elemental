@@ -19,4 +19,7 @@ void reverseArray(int *array, int length);
 // swap items of array
 void swapItems(int *array, int left, int right);
 
+// shuffle items in array
+void shuffleArray(int *array, int length);
+
 #endif

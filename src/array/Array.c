@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "Array.h"
 
 void scanArray(int *array, int length)
@@ -53,4 +55,17 @@ void swapItems(int *array, int left, int right)
     int temp = *(array + left);
     *(array + left) = *(array + right);
     *(array + right) = temp;
+}
+
+void shuffleArray(int *array, int length)
+{
+    // random seed
+    srand(time(NULL));
+
+    int random;
+    for (int i = 0; i < length - 2; i++)
+    {
+        random = rand() % (length - i) + i;
+        swapItems(array, i, random);
+    }
 }
