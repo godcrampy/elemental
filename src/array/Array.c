@@ -110,3 +110,28 @@ int maxOfArray(int *array, int length)
     }
     return max;
 }
+
+int findItem(int *array, int length, int number)
+{
+    for (int i = 0; i < length; i++)
+    {
+        if (*(array + i) == number)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int frequencyOfItem(int *array, int length, int number)
+{
+    int frequency = 0;
+    for (int i = 0; i < length; i++)
+    {
+        if (*(array + i) == number)
+        {
+            ++frequency;
+        }
+        return frequency;
+    }
+}

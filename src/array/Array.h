@@ -32,4 +32,10 @@ int meanOfArray(int *array, int length);
 int minOfArray(int *array, int length);
 int maxOfArray(int *array, int length);
 
+// find first occurence of a member
+int findItem(int *array, int length, int number);
+
+// frequency of an item
+int frequencyOfItem(int *array, int length, int number);
+
 #endif
