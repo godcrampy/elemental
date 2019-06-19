@@ -4,7 +4,7 @@
 
 -------------------------------
 
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/godcrampy/elemental/)  [![Generic badge](https://img.shields.io/badge/Version-0.9-blue.svg)](https://github.com/godcrampy/elemental/tags)  [![Generic badge](https://img.shields.io/badge/status-building-red.svg)](https://github.com/godcrampy/elemental/tags)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/godcrampy/elemental/)  [![Generic badge](https://img.shields.io/badge/Version-0.0-blue.svg)](https://github.com/godcrampy/elemental/tags)  [![Generic badge](https://img.shields.io/badge/status-building-red.svg)](https://github.com/godcrampy/elemental/tags)
 
 **Elemental** is a modest library written in the C programming language with the implementation of basic Data Structures and Algorithms.
 
