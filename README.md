@@ -2,7 +2,9 @@
   <img src="https://raw.githubusercontent.com/godcrampy/elemental/master/docs/commons/flame-named.png" style="width: 200px; height: auto;">
 </div>
 
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)  [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)  [![Generic badge](https://img.shields.io/badge/Version-0.9-blue.svg)](https://shields.io/)  [![Generic badge](https://img.shields.io/badge/status-building-red.svg)](https://shields.io/)
+-------------------------------
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/godcrampy/elemental/)  [![Generic badge](https://img.shields.io/badge/Version-0.9-blue.svg)](https://github.com/godcrampy/elemental/tags)  [![Generic badge](https://img.shields.io/badge/status-building-red.svg)](https://github.com/godcrampy/elemental/tags)
 
 **Elemental** is a modest library written in the C programming language with the implementation of basic Data Structures and Algorithms.
 
@@ -44,7 +46,7 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 
 ## Authors
 
-* **Sahil Bondre** - [godcrampy](https://github.com/godcrapy)
+* **Sahil Bondre** - [godcrampy](https://github.com/godcrampy)
 
 ## License
 
