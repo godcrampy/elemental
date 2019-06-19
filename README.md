@@ -36,7 +36,7 @@ gcc main.c Arrac.c -o main
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](Contributing.md) for details on code of conduct, and the process for submitting pull requests to me.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on code of conduct, and the process for submitting pull requests to me.
 
 ## Versioning
 
@@ -48,4 +48,4 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
