@@ -13,19 +13,23 @@ void rotateArray(int *array, int length, int steps);
 // rotate array to the left by one step O(length)
 void rotateArrayOnce(int *array, int length);
 
-// reverse array
+// reverse array O(length/2)
 void reverseArray(int *array, int length);
 
-// swap items of array
+// swap items of array O(1)
 void swapItems(int *array, int left, int right);
 
-// shuffle items in array
+// shuffle items in array O(length)
 void shuffleArray(int *array, int length);
 
-// sum of array
+// sum of array O(length)
 int sumOfArray(int *array, int length);
 
-// mean of array
+// mean of array O(length)
 int meanOfArray(int *array, int length);
+
+// max and min of array O(length)
+int minOfArray(int *array, int length);
+int maxOfArray(int *array, int length);
 
 #endif

@@ -84,3 +84,29 @@ int meanOfArray(int *array, int length)
 {
     return sumOfArray(array, length) / length;
 }
+
+int minOfArray(int *array, int length)
+{
+    int min = *array;
+    for (int i = 1; i < length; i++)
+    {
+        if (*(array + i) < min)
+        {
+            min = *(array + i);
+        }
+    }
+    return min;
+}
+
+int maxOfArray(int *array, int length)
+{
+    int max = *array;
+    for (int i = 1; i < length; i++)
+    {
+        if (*(array + i) > max)
+        {
+            max = *(array + i);
+        }
+    }
+    return max;
+}
