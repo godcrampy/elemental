@@ -32,10 +32,13 @@ int meanOfArray(int *array, int length);
 int minOfArray(int *array, int length);
 int maxOfArray(int *array, int length);
 
-// find first occurence of a member
+// find first occurence of a member O(length)
 int findItem(int *array, int length, int number);
 
-// frequency of an item
+// frequency of an item O(length)
 int frequencyOfItem(int *array, int length, int number);
+
+// bubble sort array O(length^2)
+void bubbleSort(int *array, int length);
 
 #endif
