@@ -47,16 +47,16 @@ void bubbleSort(int *array, int length);
 // selection sort array O(length^2)
 void selectionSort(int *array, int length);
 
-// insertion sort
+// insertion sort array O(length^2)
 void insertionSort(int *array, int length);
 
-// merge sort
+// merge sort array O(length*log(length))
 void mergeSort(int *array, int length);
 // Helper functions
 void splitArray(int *temp, int *array, int leftStart, int rightEnd);
 void mergeHalves(int *temp, int *array, int leftStart, int rightEnd);
 
-// quick sort
+// quick sort array O(length*log(length))
 void quickSort(int *array, int length);
 void managePartitioning(int *array, int left, int right);
 int doPartition(int *array, int last);
