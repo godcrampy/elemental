@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 #include "Array.h"
 
 void scanArray(int *array, int length)
@@ -292,4 +293,16 @@ int doPartition(int *array, int last)
     }
     swapItems(array, 0, rightPointer);
     return rightPointer;
+}
+
+int isSorted(int *array, int length)
+{
+    for (int i = 1; i < length; i++)
+    {
+        if (*(array + i) < *(array + i - 1))
+        {
+            return 0;
+        }
+    }
+    return 1;
 }

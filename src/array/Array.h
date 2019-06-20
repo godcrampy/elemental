@@ -61,4 +61,7 @@ void quickSort(int *array, int length);
 void managePartitioning(int *array, int left, int right);
 int doPartition(int *array, int last);
 
+// is array sorted
+int isSorted(int *array, int length);
+
 #endif
