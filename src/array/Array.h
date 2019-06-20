@@ -59,9 +59,9 @@ void mergeHalves(int *temp, int *array, int leftStart, int rightEnd);
 // quick sort array O(length*log(length))
 void quickSort(int *array, int length);
 void managePartitioning(int *array, int left, int right);
-int doPartition(int *array, int last);
+int doPartition(int *array, int first, int last);
 
-// is array sorted
+// is array sorted O(length)
 int isSorted(int *array, int length);
 
 #endif

@@ -112,6 +112,14 @@ int maxOfArray(int *array, int length)
     return max;
 }
 
+void copyArray(int *originalArray, int originalStart, int *finalArray, int finalStart, int length)
+{
+    for (int i = 0; i < length; i++)
+    {
+        *(finalArray + finalStart + i) = *(originalArray + originalStart + i);
+    }
+}
+
 int findItem(int *array, int length, int number)
 {
     for (int i = 0; i < length; i++)
@@ -194,13 +202,13 @@ void insertionSort(int *array, int length)
 void mergeSort(int *array, int length)
 {
     int temp[length];
-    splitArray(temp, array, 0, length);
+    splitArray(temp, array, 0, length - 1);
 }
 
 void splitArray(int *temp, int *array, int leftStart, int rightEnd)
 {
     // 1 2 3 4 5
-    if (leftStart <= rightEnd)
+    if (leftStart >= rightEnd)
     {
         return;
     }
@@ -231,30 +239,9 @@ void mergeHalves(int *temp, int *array, int leftStart, int rightEnd)
         }
         tempPointer++;
     }
-    //add the remaining elements
-    // while (leftPointer <= leftEnd)
-    // {
-    //     *(temp + tempPointer) = *(array + leftPointer);
-    //     tempPointer++;
-    //     leftPointer++;
-    // }
     copyArray(array, leftPointer, temp, tempPointer, leftEnd - leftPointer + 1);
-    while (rightPointer <= rightEnd)
-    {
-        *(temp + tempPointer) = *(array + rightPointer);
-        tempPointer++;
-        rightPointer++;
-    }
     copyArray(array, rightPointer, temp, tempPointer, rightEnd - rightPointer + 1);
     copyArray(temp, leftStart, array, leftStart, rightEnd - leftStart + 1);
-}
-
-void copyArray(int *originalArray, int originalStart, int *finalArray, int finalStart, int length)
-{
-    for (int i = 0; i < length; i++)
-    {
-        *(finalArray + finalStart + i) = *(originalArray + originalStart + i);
-    }
 }
 
 void quickSort(int *array, int length)
@@ -266,32 +253,42 @@ void managePartitioning(int *array, int left, int right)
 {
     if (left < right)
     {
-        int pivot = doPartition(array, right);
+        int pivot = doPartition(array, left, right);
         managePartitioning(array, left, pivot - 1);
         managePartitioning(array, pivot + 1, right);
     }
 }
 
-int doPartition(int *array, int last)
+int doPartition(int *array, int first, int last)
 {
     //last is the index of last element
-    int leftPointer = 1, rightPointer = last, pivot = 0;
-    while (leftPointer < rightPointer)
+    int leftPointer = first + 1, rightPointer = last, pivot = *(array + first);
+    if (leftPointer < rightPointer)
     {
-        while (*(array + leftPointer) <= pivot)
+        while (leftPointer < rightPointer)
         {
-            leftPointer++;
+            while (*(array + leftPointer) <= pivot)
+            {
+                leftPointer++;
+            }
+            while (*(array + rightPointer) > pivot)
+            {
+                rightPointer--;
+            }
+            if (leftPointer < rightPointer)
+            {
+                swapItems(array, leftPointer, rightPointer);
+            }
         }
-        while (*(array + rightPointer) > pivot)
+        swapItems(array, first, rightPointer);
+    }
+    else if (leftPointer == rightPointer)
+    {
+        if (*(array + leftPointer - 1) > *(array + rightPointer))
         {
-            rightPointer--;
-        }
-        if (leftPointer < rightPointer)
-        {
-            swapItems(array, leftPointer, rightPointer);
+            swapItems(array, leftPointer - 1, rightPointer);
         }
     }
-    swapItems(array, 0, rightPointer);
     return rightPointer;
 }
 
