@@ -189,3 +189,69 @@ void insertionSort(int *array, int length)
         }
     }
 }
+
+void mergeSort(int *array, int length)
+{
+    int temp[length];
+    splitArray(temp, array, 0, length);
+}
+
+void splitArray(int *temp, int *array, int leftStart, int rightEnd)
+{
+    // 1 2 3 4 5
+    if (leftStart <= rightEnd)
+    {
+        return;
+    }
+    int middle = (leftStart + rightEnd) / 2;
+    splitArray(temp, array, leftStart, middle);
+    splitArray(temp, array, middle + 1, rightEnd);
+    mergeHalves(temp, array, leftStart, rightEnd);
+}
+
+void mergeHalves(int *temp, int *array, int leftStart, int rightEnd)
+{
+    int tempPointer = leftStart;
+    int leftEnd = (leftStart + rightEnd) / 2;
+    int rightStart = leftEnd + 1;
+    int leftPointer = leftStart;
+    int rightPointer = rightStart;
+    while (leftPointer <= leftEnd && rightPointer <= rightEnd)
+    {
+        if (*(array + leftPointer) <= *(array + rightPointer))
+        {
+            *(temp + tempPointer) = *(array + leftPointer);
+            leftPointer++;
+        }
+        else
+        {
+            *(temp + tempPointer) = *(array + rightPointer);
+            rightPointer++;
+        }
+        tempPointer++;
+    }
+    //add the remaining elements
+    // while (leftPointer <= leftEnd)
+    // {
+    //     *(temp + tempPointer) = *(array + leftPointer);
+    //     tempPointer++;
+    //     leftPointer++;
+    // }
+    copyArray(array, leftPointer, temp, tempPointer, leftEnd - leftPointer + 1);
+    while (rightPointer <= rightEnd)
+    {
+        *(temp + tempPointer) = *(array + rightPointer);
+        tempPointer++;
+        rightPointer++;
+    }
+    copyArray(array, rightPointer, temp, tempPointer, rightEnd - rightPointer + 1);
+    copyArray(temp, leftStart, array, leftStart, rightEnd - leftStart + 1);
+}
+
+void copyArray(int *originalArray, int originalStart, int *finalArray, int finalStart, int length)
+{
+    for (int i = 0; i < length; i++)
+    {
+        *(finalArray + finalStart + i) = *(originalArray + originalStart + i);
+    }
+}

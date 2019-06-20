@@ -38,6 +38,9 @@ int findItem(int *array, int length, int number);
 // frequency of an item O(length)
 int frequencyOfItem(int *array, int length, int number);
 
+// copy an array to another array O(length)
+void copyArray(int *originalArray, int originalStart, int *finalArray, int finalStart, int length);
+
 // bubble sort array O(length^2)
 void bubbleSort(int *array, int length);
 
@@ -45,7 +48,12 @@ void bubbleSort(int *array, int length);
 void selectionSort(int *array, int length);
 
 // insertion sort
-void insertionSort(int * array, int length);
+void insertionSort(int *array, int length);
 
+// merge sort
+void mergeSort(int *array, int length);
+// Helper functions
+void splitArray(int *temp, int *array, int leftStart, int rightEnd);
+void mergeHalves(int *temp, int *array, int leftStart, int rightEnd);
 
 #endif
