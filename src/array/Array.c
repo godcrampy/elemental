@@ -255,3 +255,41 @@ void copyArray(int *originalArray, int originalStart, int *finalArray, int final
         *(finalArray + finalStart + i) = *(originalArray + originalStart + i);
     }
 }
+
+void quickSort(int *array, int length)
+{
+    managePartitioning(array, 0, length - 1);
+}
+
+void managePartitioning(int *array, int left, int right)
+{
+    if (left < right)
+    {
+        int pivot = doPartition(array, right);
+        managePartitioning(array, left, pivot - 1);
+        managePartitioning(array, pivot + 1, right);
+    }
+}
+
+int doPartition(int *array, int last)
+{
+    //last is the index of last element
+    int leftPointer = 1, rightPointer = last, pivot = 0;
+    while (leftPointer < rightPointer)
+    {
+        while (*(array + leftPointer) <= pivot)
+        {
+            leftPointer++;
+        }
+        while (*(array + rightPointer) > pivot)
+        {
+            rightPointer--;
+        }
+        if (leftPointer < rightPointer)
+        {
+            swapItems(array, leftPointer, rightPointer);
+        }
+    }
+    swapItems(array, 0, rightPointer);
+    return rightPointer;
+}

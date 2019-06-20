@@ -56,4 +56,9 @@ void mergeSort(int *array, int length);
 void splitArray(int *temp, int *array, int leftStart, int rightEnd);
 void mergeHalves(int *temp, int *array, int leftStart, int rightEnd);
 
+// quick sort
+void quickSort(int *array, int length);
+void managePartitioning(int *array, int left, int right);
+int doPartition(int *array, int last);
+
 #endif
