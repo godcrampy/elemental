@@ -64,4 +64,12 @@ int doPartition(int *array, int first, int last);
 // is array sorted O(length)
 int isSorted(int *array, int length);
 
+// linear search O(length)
+int linearSearch(int *array, int length, int number);
+
+// binary search O(length)
+int binarySearch(int *array, int length, int number);
+int doBinarySearch(int *array, int left, int right, int target);
+
+
 #endif

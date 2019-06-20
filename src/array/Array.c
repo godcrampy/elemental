@@ -303,3 +303,57 @@ int isSorted(int *array, int length)
     }
     return 1;
 }
+
+int linearSearch(int *array, int length, int number)
+{
+    for (int i = 0; i < length; i++)
+    {
+        if (*(array + i) == number)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int binarySearch(int *array, int length, int number)
+{
+    if (isSorted(array, length))
+    {
+        doBinarySearch(array, 0, length - 1, number);
+    }
+    else
+    {
+        // binary sort requires sorted array
+        return -2;
+    }
+}
+
+int doBinarySearch(int *array, int left, int right, int target)
+{
+    if (left == right)
+    {
+        if (*(array + left) == target)
+        {
+            return left;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    //left and right are inclusive of their positions
+    int middle = left + right;
+    if (target < *(array + middle))
+    {
+        doBinarySearch(array, left, middle - 1, target);
+    }
+    else if (target > *(array + middle))
+    {
+        doBinarySearch(array, middle + 1, right, target);
+    }
+    else
+    {
+        doBinarySearch(array, middle, middle, target);
+    }
+}
