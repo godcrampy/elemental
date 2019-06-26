@@ -10,7 +10,7 @@
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Note: These implementations are for understanding the algorithms and data structures. The standard libraries of the language may have a faster implementation of this.
 
 ### Prerequisites
 
@@ -40,9 +40,6 @@ gcc main.c Arrac.c -o main
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on code of conduct, and the process for submitting pull requests to me.
 
-## Versioning
-
-I use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/godcrampy/elemental/tags). 
 
 ## Authors
 
