@@ -1,15 +1,16 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <iostream>
 #include <stdbool.h>
 #include "Array.h"
+
+using namespace std;
 
 void scanArray(int *array, int length)
 {
     for (int i = 0; i < length; i++)
     {
-        scanf("%d", array + i);
-        getchar();
+        cin>>*(array + i);
     }
 }
 
@@ -17,9 +18,9 @@ void printArray(int *array, int length)
 {
     for (int i = 0; i < length; i++)
     {
-        printf("%d ", *(array + i));
+        cout<<*(array + i)<< " ";
     }
-    printf("\n");
+    cout<<endl;
 }
 
 void rotateArrayOnce(int *array, int length)
@@ -141,8 +142,8 @@ int frequencyOfItem(int *array, int length, int number)
         {
             ++frequency;
         }
-        return frequency;
     }
+    return frequency;
 }
 
 void bubbleSort(int *array, int length)
@@ -320,13 +321,10 @@ int binarySearch(int *array, int length, int number)
 {
     if (isSorted(array, length))
     {
-        doBinarySearch(array, 0, length - 1, number);
+        return doBinarySearch(array, 0, length - 1, number);
     }
-    else
-    {
         // binary sort requires sorted array
-        return -2;
-    }
+    return -2;
 }
 
 int doBinarySearch(int *array, int left, int right, int target)
@@ -337,10 +335,7 @@ int doBinarySearch(int *array, int left, int right, int target)
         {
             return left;
         }
-        else
-        {
             return -1;
-        }
     }
     //left and right are inclusive of their positions
     int middle = left + right;
@@ -352,8 +347,7 @@ int doBinarySearch(int *array, int left, int right, int target)
     {
         doBinarySearch(array, middle + 1, right, target);
     }
-    else
-    {
-        doBinarySearch(array, middle, middle, target);
-    }
+
+    doBinarySearch(array, middle, middle, target);
+    return 0;
 }
