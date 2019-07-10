@@ -12,10 +12,6 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Note: These implementations are for understanding the algorithms and data structures. The standard libraries of the language may have a faster implementation of this.
 
-### Prerequisites
-
-* C compiler (GCC, Clang etc.)
-
 ### Installing
 
 1. Clone this repository
