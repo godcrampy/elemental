@@ -1,0 +1,25 @@
+{
+  "name": "elemental",
+  "version": "1.0.0",
+  "description": "Modest Data Structures and Algorithms Implementation",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godcrampy/elemental.git"
+  },
+  "author": "Sahil Bondre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/godcrampy/elemental/issues"
+  },
+  "homepage": "https://github.com/godcrampy/elemental#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0"
+  }
+}
